@@ -1,10 +1,10 @@
-let audio;
 let questionIndex = 0;
-
 const presentsImage = document.getElementById("presents");
 const firstPresentButton = document.getElementById("present-1-button");
 let introElement = document.getElementById("intro-video");
 let linkElement = document.getElementById("present-link");
+let winLinkElement = document.getElementById("win-link");
+let winElement = document.getElementById("win-picture");
 
 let videoPicture = "";
 let presentButton = "";
@@ -27,15 +27,6 @@ function startGame() {
 
     introElement.style.display = "block";
     introElement.href = "https://drive.google.com/file/d/1xmyUACIa52fFeZ59Gydpw1brJ9YCB6fJ/view?usp=sharing";
-
-    // audio = new Audio("https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/intro.mp3");
-    // audio.play();
-
-    // audio.addEventListener("ended", () => {
-    //     videoPicture.style.display = "none";
-    //     presentsImage.style.display = "block";
-    //     firstPresentButton.style.display = "block";
-    // });
 }
 
 function finishIntro() {
@@ -89,11 +80,11 @@ function presentVideo(videoNum) {
         presentButton = document.getElementById("present-10-button");
         nextPresentButton = document.getElementById("present-11-button");
     } else if (videoNum === 11) {
-        anchorElement.href = "https://drive.google.com/file/d/13Zq1CIx3xeUO26EDYdAwbWwj-lup6Oih/view?usp=sharing";
+        anchorElement.href = "https://www.google.com/";
         presentButton = document.getElementById("present-11-button");
         nextPresentButton = document.getElementById("present-12-button");
     } else if (videoNum === 12) {
-        anchorElement.href = "https://drive.google.com/file/d/13Zq1CIx3xeUO26EDYdAwbWwj-lup6Oih/view?usp=sharing";
+        anchorElement.href = "https://www.yale.edu/";
         presentButton = document.getElementById("present-12-button");
         nextPresentButton = document.getElementById("present-13-button");
     } else if (videoNum === 13) {
@@ -109,92 +100,25 @@ function presentVideo(videoNum) {
     presentButton.style.display = "none";
 }
 
-    // if (videoNum == 1) {
-    //     videoPicture = document.getElementById("present-1-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/CFAA.mp3";
-    //     presentButton = document.getElementById("present-1-button");
-    //     nextPresentButton = document.getElementById("present-2-button");
-    // } else if (videoNum == 2) {
-    //     videoPicture = document.getElementById("present-2-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/fair_use.mp3";
-    //     presentButton = document.getElementById("present-2-button");
-    //     nextPresentButton = document.getElementById("present-3-button");
-    // } else if (videoNum == 3) {
-    //     videoPicture = document.getElementById("present-3-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/piracy.mp3";
-    //     presentButton = document.getElementById("present-3-button");
-    //     nextPresentButton = document.getElementById("present-4-button");
-    // } else if (videoNum == 4) {
-    //     videoPicture = document.getElementById("present-4-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/DMCA.mp3";
-    //     presentButton = document.getElementById("present-4-button");
-    //     nextPresentButton = document.getElementById("present-5-button");
-    // } else if (videoNum == 5) {
-    //     videoPicture = document.getElementById("present-5-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/section_230.mp3";
-    //     presentButton = document.getElementById("present-5-button");
-    //     nextPresentButton = document.getElementById("present-6-button");
-    // } else if (videoNum == 6) {
-    //     videoPicture = document.getElementById("present-6-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/freedom_of_speech.mp3";
-    //     presentButton = document.getElementById("present-6-button");
-    //     nextPresentButton = document.getElementById("present-7-button");
-    // } else if (videoNum == 7) {
-    //     videoPicture = document.getElementById("present-7-picture");
-    //     presentAudio = "https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/defamation.mp3";
-    //     presentButton = document.getElementById("present-7-button");
-    //     nextPresentButton = document.getElementById("present-8-button");
-    // } else if (videoNum == 8) {
-    //     presentsImage.style.display = "none";
-    //     presentButton.style.display = "none";
-    //     nextPresentButton.style.display = "none";
-
-    //     goToCoalPresent();
-    //     return;
-    // }
-
-    // videoPicture.style.display = "block";
-    // skipButton.style.display = "block";
-    // presentsImage.style.display = "none";
-    // presentButton.style.display = "none";
-
-    // audio = new Audio(presentAudio);
-    // audio.play();
-
-    // audio.addEventListener("ended", () => {
-    //     showQuizPopup();
-    // });
-// }
-
 function goToCoalPresent() {
-    // videoPicture = document.getElementById("coal-picture");
-    // videoPicture.style.display = "block";
+    linkElement.style.display = "none";
+    coalPicture = document.getElementById("coal-picture");
+    coalPicture.style.display = "block";
 
-    // audio = new Audio("https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/coal_present.mp3");
-    // audio.play();
-
-    // audio.addEventListener("ended", () => {
-    //     goToWinPage();
-    // });
+    setTimeout(() => {
+        coalPicture.style.display = "none";
+        goToWinPage();
+    }, 1500);
 }
 
 function goToWinPage() {
-    // videoPicture.style.display = "none";
-    // videoPicture = document.getElementById("win-picture");
-    // videoPicture.style.display = "block";
-
-    // audio = new Audio("https://media.githubusercontent.com/media/elfcrimes/elfcrimes.github.io/refs/heads/main/present_audio/win.mp3");
-    // audio.play();
+    winLinkElement.style.display = "block";
 }
 
-// function skipAudio() {
-//     if (audio && !audio.ended) {
-//         audio.currentTime = audio.duration; // Skip to the end
-//     }
-
-//     const skipButton = document.getElementById("skip-button");
-//     skipButton.style.display = "none";
-// }
+function showConfetti() {
+    winLinkElement.style.display = "none";
+    winElement.style.display = "block";
+}
 
 function showQuizPopup() {
     const question = questions[questionIndex];
