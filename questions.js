@@ -62,4 +62,49 @@ const questions = [
         ],
         answer: 0
     },
+    {
+        question: "Which of the following Pamsucks’ posts would give Pim and Pom the best case to disclose their identity?",
+        options: [
+            "Photo of Pam wrapping a present with caption, \"She hates her job lol\"",
+            "Photo of Pam eating a hotdog horizontally with caption, \"HELPPP LOL\"",
+            "Photo of Pam talking to another elf with the caption, \"Attention seeker alert!\""
+        ],
+        answer: 0
+    },
+    {
+        question: "What’s one reason why Peter Parker’s drone over Pim and Pom’s backyard did not pass the Katz test?",
+        options: [
+            "It has spider eyes with a camera.",
+            "It flies over private property.",
+            "The backyard is easily visible to any neighbor."
+        ],
+        answer: 2
+    },
+    {
+        question: "How can sharenting make you the product?",
+        options: [
+            "Sell you dog collars when you don’t have a dog",
+            "Give you ads related to your likes, location, and other personal information",
+            "Post your digital footprint to your friends on ElfChat"
+        ],
+        answer: 1
+    },
+    {
+        question: "Why do big companies dislike net neutrality?",
+        options: [
+            "They don’t want small companies to have handouts",
+            "They want to have faster internet lanes by paying more",
+            "They believe net neutrality slows down the internet"
+        ],
+        answer: 1
+    },
+    {
+        question: "What is one benefit of Apple’s strong control over the App Store?",
+        options: [
+            "It ensures apps are safe and free from malware.",
+            "It allows developers to set any price they want.",
+            "It gives users complete freedom to customize apps."
+        ],
+        answer: 0
+    },
 ]
