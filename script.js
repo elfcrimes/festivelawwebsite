@@ -25,6 +25,9 @@ function startGame() {
 
     firstPresentButton.style.display = "none";
 
+    audio = new Audio("audio/backgroundmusic.MP3");
+    audio.play();
+
     introElement.style.display = "block";
     introElement.href = "https://drive.google.com/file/d/1xmyUACIa52fFeZ59Gydpw1brJ9YCB6fJ/view?usp=sharing";
 }
@@ -36,6 +39,9 @@ function finishIntro() {
 }
 
 function presentVideo(videoNum) {
+    audio = new Audio("audio/backgroundmusic.MP3");
+    audio.play();
+
     linkElement.style.display = "block";
     const anchorElement = document.getElementById("present-anchor");
 
@@ -80,11 +86,11 @@ function presentVideo(videoNum) {
         presentButton = document.getElementById("present-10-button");
         nextPresentButton = document.getElementById("present-11-button");
     } else if (videoNum === 11) {
-        anchorElement.href = "https://www.google.com/";
+        anchorElement.href = "https://drive.google.com/file/d/1rQL_Bs_RH3LNI75Uw-OYqVYrgINeeKU0/view?usp=sharing";
         presentButton = document.getElementById("present-11-button");
         nextPresentButton = document.getElementById("present-12-button");
     } else if (videoNum === 12) {
-        anchorElement.href = "https://www.yale.edu/";
+        anchorElement.href = "https://drive.google.com/file/d/1U7kbf5BTlEg_SXBes9up8T63qSsTCUa-/view?usp=sharing";
         presentButton = document.getElementById("present-12-button");
         nextPresentButton = document.getElementById("present-13-button");
     } else if (videoNum === 13) {
@@ -153,7 +159,7 @@ function submitAnswer() {
         const answerIndex = parseInt(selectedOption.value);
 
         if (answerIndex === questions[questionIndex].answer) {
-            showFeedback("images/correct.png", "Correct!", true);
+            showFeedback("images/correct.jpeg", "Correct!", true);
             setTimeout(() => {
                 questionIndex += 1;
                 closeQuizPopup();
@@ -165,7 +171,7 @@ function submitAnswer() {
                 clearFeedback();
             }, 1500);
         } else {
-            showFeedback("images/incorrect.png", "Incorrect, please try again.", false);
+            showFeedback("images/incorrect.jpeg", "Incorrect, please try again.", false);
         }
     } else {
         showFeedback("images/shrug.png", "Please select an answer.", false);
